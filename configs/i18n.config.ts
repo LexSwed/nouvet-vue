@@ -1,14 +1,14 @@
-import { defineI18nConfig } from '#i18n'
+import { defineI18nConfig } from "#i18n";
 
 export default defineI18nConfig(() => ({
   legacy: false,
-  locale: 'en',
+  locale: "en",
   messages: {
     en: {
-      welcome: 'Welcome'
+      welcome: "Welcome",
     },
     es: {
-      welcome: 'Bienvenue'
-    }
-  }
-}))
+      welcome: "Bienvenue",
+    },
+  },
+}));
