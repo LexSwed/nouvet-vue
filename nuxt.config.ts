@@ -10,27 +10,30 @@ export default defineNuxtConfig({
     [
       "@nuxtjs/eslint-module",
       {
-        /* module options */
+        lintOnStart: false,
       },
     ],
     [
       "@nuxtjs/i18n",
       {
         vueI18n: "./configs/i18n.config.ts",
+        types: "composition",
         defaultLocale: "en",
+        lazy: true,
+        langDir: "locales",
         baseUrl: "https://nouvet.pages.dev",
         locales: [
           {
             code: "en",
-            iso: "en-US",
-          },
-          {
-            code: "en",
             iso: "en-UK",
+            files: ["en-UK.json"],
+            label: "English",
           },
           {
             code: "es",
             iso: "es-ES",
+            files: ["es-ES.json"],
+            label: "Español (ES)",
           },
         ],
       },

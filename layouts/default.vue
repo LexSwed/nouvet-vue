@@ -1,22 +1,11 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import { useI18n } from "vue-i18n";
-import { useRoute, useHead } from "#imports";
-import { useLocaleHead } from "#i18n";
-import type { RouteMeta } from "vue-router";
+import { useHead, useLocaleHead } from "#imports";
 
-const route = useRoute();
-const { t } = useI18n();
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: "id",
   addSeoAttributes: true,
 });
-const title = computed(() =>
-  t("layouts.title", {
-    title: t((route.meta as RouteMeta & { title?: string }).title || "TBD"),
-  }),
-);
 
 useHead({
   link: [
@@ -32,7 +21,7 @@ useHead({
   <div>
     <Html :lang="head.htmlAttrs?.lang" :dir="head.htmlAttrs?.dir">
       <Head>
-        <Title>{{ title }}</Title>
+        <Title>{{ $t("meta.title") }}</Title>
         <template v-for="link in head.link" :key="link.id">
           <Link
             :id="link.id"

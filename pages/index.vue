@@ -1,12 +1,14 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useI18n } from 'vue-i18n'
+import { ref } from "vue";
+import { useI18n } from "vue-i18n";
 
 const { locale } = useI18n();
 
-
-const langs = ref([{ key: 'en', label: 'English' }, { key: 'es', label: 'Español' }])
+const langs = ref([
+  { key: "en-UK", label: "English" },
+  { key: "es-ES", label: "Español" },
+]);
 </script>
 
 <template>
@@ -17,7 +19,7 @@ const langs = ref([{ key: 'en', label: 'English' }, { key: 'es', label: 'Españo
           {{ lang.label }}
         </option>
       </select>
-      <p>{{ $t("welcome") }}</p>
+      <p>{{ $t("www.headline") }}</p>
     </form>
   </div>
 </template>
