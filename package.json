@@ -11,12 +11,20 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/i18n": "^8.0.0-rc.5",
-    "nuxt": "^3.8.0",
-    "vue": "^3.3.7",
+    "@nuxtjs/tailwindcss": "^6.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "eslint": "^8.54.0",
+    "eslint-plugin-vue": "^9.18.1",
+    "nuxt": "^3.8.2",
+    "prettier": "^3.1.0",
+    "vue": "^3.3.8",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "vue-i18n": "^9.6.2"
+    "@tanstack/vue-query": "^5.8.4",
+    "vue-i18n": "^9.7.0"
   }
 }
