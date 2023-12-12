@@ -1,4 +1,4 @@
-import { defineI18nConfig } from "#i18n";
+import { defineI18nConfig } from "#imports";
 
 export default defineI18nConfig(() => ({
   legacy: false,

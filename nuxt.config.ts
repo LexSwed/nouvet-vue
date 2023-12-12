@@ -6,6 +6,13 @@ export default defineNuxtConfig({
   imports: {
     autoImport: false,
   },
+  typescript: {
+    strict: true,
+  },
+  css: ["./assets/globals.css"],
+  alias: {
+    "~/": "<rootDir>/",
+  },
   modules: [
     [
       "@nuxtjs/eslint-module",

@@ -1,17 +1,33 @@
 {
-  "meta": {
-    "title": "NouVet for pets wellbeing"
+  "common": {
+    "link-home": "Go to home page",
+    "sign-in": "Sign In",
+    "app-name": "NouVet"
   },
   "www": {
-    "headline": "NouVet for pets wellbeing",
+    "headline": "Your Pet's Well-being {0} Ensured",
     "subheadline": "Keep your pet healthy and happy, never forgetting a detail about their wellbeing",
-    "link-home": "Go to home page",
     "open-family-app": "Open app",
     "cta-start": "Start",
     "features": "Features",
     "link-about-the-project": "About",
     "link-privacy-policy": "Privacy policy",
     "hero-image": "A cat and a dog sleeping together",
-    "heading-features": "Features"
+    "heading-features": "Features",
+    "feature-medical-history": "Own the medical history of your pet",
+    "feature-share-reminders": "Share the reminders with your family",
+    "feature-connect-veterinaries": "Connect with veterinaries around you",
+    "meta.main-title": "NouVet for pets wellbeing",
+    "meta.about-title": "About NouVet",
+    "meta.privacy-title": "NouVet privacy policy"
+  },
+  "login": {
+    "meta.title": "NouVet | Sign In",
+    "hero-image": "A cat and a dog sleeping together",
+    "with-facebook": "Continue with Facebook"
+  },
+  "family": {
+    "login": "Log in",
+    "meta.title": "NouVet | {familyName}"
   }
 }
