@@ -13,6 +13,13 @@ export default defineNuxtConfig({
   alias: {
     "~/": "<rootDir>/",
   },
+  postcss: {
+    plugins: {
+      "tailwindcss/nesting": {},
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   modules: [
     [
       "@nuxtjs/eslint-module",

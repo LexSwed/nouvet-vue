@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { cva, type VariantProps } from "class-variance-authority";
 import { tw } from "./tw";
-import type { SVGAttributes } from "vue";
+import { type SVGAttributes } from "vue";
+import { useAttrs } from "vue";
 
 const iconVariants = cva("", {
   variants: {
@@ -21,15 +22,14 @@ const iconVariants = cva("", {
 
 type IconVariants = VariantProps<typeof iconVariants>;
 
-// type IconProps = IconVariants & /* @vue-ignore */ SVGAttributes &{
-type IconProps = /* @vue-ignore */ SVGAttributes & {
-  size: IconVariants['size'],
-  name: string;
-}
+const props = defineProps<{
+  size?: IconVariants["size"];
+  use: string;
+}>();
 
-const props = defineProps<IconProps>();
+const attrs = useAttrs() as SVGAttributes;
 </script>
 
 <template>
-  <svg-icon :name="props.name" :class="tw(iconVariants(props), props.class)" />
+  <svg-icon :name="props.use" :class="tw(iconVariants({ size: props.size }))" v-bind="attrs" />
 </template>

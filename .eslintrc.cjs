@@ -7,14 +7,14 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:vue/vue3-strongly-recommended",
+    "plugin:vue/base",
   ],
   overrides: [
     {
       env: {
         node: true,
       },
-      files: [".eslintrc.{js,cjs}"],
+      files: [".eslintrc.{js,cjs}", "postcss.config.cjs"],
       parserOptions: {
         sourceType: "script",
       },
@@ -27,8 +27,6 @@ module.exports = {
   },
   plugins: ["@typescript-eslint", "vue"],
   rules: {
-    "vue/max-attributes-per-line": "off",
     "vue/multi-word-component-names": "off",
-    "vue/html-indent": "off",
   },
 };

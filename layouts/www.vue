@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
-import ANavCard from "~/lib/ui/ANavCard.vue";
-import ALogoLink from '~/lib/ui/ALogoLink.vue'
+import NouCard from "~/lib/ui/NouCard.vue";
+import LogoLink from '~/lib/ui/LogoLink.vue'
+import NouIcon from "~/lib/ui/NouIcon.vue";
 
 const { t } = useI18n();
 
@@ -28,15 +29,15 @@ const items: Array<{ label: string; icon: string; href: string }> = [
   <div class="min-h-full bg-main pb-8 pt-4">
     <header class="container flex flex-col gap-4">
       <div class="flex flex-row items-center">
-        <ALogoLink :label="$t('common.app-name')" class="-m-4 p-4" />
+        <LogoLink :label="$t('common.app-name')" class="-m-4 p-4" />
       </div>
       <nav>
         <ul class="-mx-4 flex snap-x snap-mandatory flex-row gap-2 overflow-x-auto p-2 scrollbar-none sm:-mx-2">
           <li v-for="item in items" :key="item.href" class="shrink-0">
-            <ANavCard :href="item.href" class="flex min-w-[8rem] flex-col place-items-start gap-2">
-              <AIcon :icon="item.icon" size="lg" class="text-primary" />
+            <NouCard :href="item.href" class="flex min-w-[8rem] flex-col place-items-start gap-2">
+              <NouIcon :use="item.icon" size="lg" class="text-primary" />
               {{ item.label }}
-            </ANavCard>
+            </NouCard>
           </li>
         </ul>
       </nav>
